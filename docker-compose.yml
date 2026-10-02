@@ -1,0 +1,18 @@
+services:
+  chatbot-api:
+    build: ./chatbot-api
+    environment:
+      GEMINI_API_KEY: ${GEMINI_API_KEY}
+      GEMINI_MODEL: ${GEMINI_MODEL:-gemini-flash-lite-latest}
+      GEMINI_TEMPLATE: ${GEMINI_TEMPLATE:-default}
+    ports:
+      - "8080:8080"
+    restart: unless-stopped
+
+  application:
+    build: ./application
+    ports:
+      - "3000:80"
+    depends_on:
+      - chatbot-api
+    restart: unless-stopped

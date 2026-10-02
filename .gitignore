@@ -1,0 +1,17 @@
+# Local env
+.env
+
+# chatbot-api
+chatbot-api/target/
+chatbot-api/.idea/
+chatbot-api/*.iml
+
+# application
+application/node_modules/
+application/dist/
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

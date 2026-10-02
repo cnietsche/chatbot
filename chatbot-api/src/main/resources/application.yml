@@ -1,0 +1,8 @@
+server:
+  port: 8080
+
+gemini:
+  api-key: ${GEMINI_API_KEY:}
+  model: ${GEMINI_MODEL:gemini-flash-lite-latest}
+  api-url: ${GEMINI_API_URL:https://generativelanguage.googleapis.com/v1beta/models}
+  template: ${GEMINI_TEMPLATE:default}
